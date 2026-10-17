@@ -1,0 +1,17 @@
+version: "3.8"
+services:
+  wa-bot:
+    build: .
+    container_name: wa-bot-seguranca
+    restart: unless-stopped
+    volumes:
+      - ./bot_data:/usr/src/app   # código + sqlite etc (ajuste conforme preferir)
+      - ./.wwebjs_auth:/.wwebjs_auth  # persiste sessão LocalAuth
+      - ./quarantine:/usr/src/app/quarantine
+    environment:
+      - NODE_ENV=production
+      - VIRUSTOTAL_API_KEY=${VIRUSTOTAL_API_KEY}
+      - SESSION_DATA_PATH=${SESSION_DATA_PATH:-.wwebjs_auth}
+      - ADMIN_NOTIFY_WEBHOOK=${ADMIN_NOTIFY_WEBHOOK:-}
+    tty: true
+    stdin_open: true

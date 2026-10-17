@@ -1,0 +1,18 @@
+{
+  "admins": ["5511999998888@c.us"],
+  "whitelistDomains": ["example.com"],
+  "shortenerDomains": ["bit.ly", "tinyurl.com", "t.co"],
+  "profanity": ["palavrão1", "palavrão2"],
+  "welcomeMessage": "Seja bem-vindo(a)! Leia as regras: coloque aqui as regras do grupo.",
+  "flood": {
+    "count": 5,
+    "seconds": 10,
+    "warnsToKick": 3
+  },
+  "actions": {
+    "autoDeleteLinks": true,
+    "autoDeleteProfanity": true,
+    "autoKickOnFlood": true,
+    "virusTotalCheck": true
+  }
+}

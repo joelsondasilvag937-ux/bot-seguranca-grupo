@@ -1,0 +1,21 @@
+{
+  "name": "bot-seguranca-grupo",
+  "version": "1.0.0",
+  "description": "Bot moderador automático para grupos WhatsApp (whatsapp-web.js + VirusTotal)",
+  "main": "index.stable.js",
+  "scripts": {
+    "start": "node index.stable.js",
+    "start:dev": "NODE_ENV=development node index.stable.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "better-sqlite3": "^9.4.3",
+    "dotenv": "^16.0.0",
+    "qrcode-terminal": "^0.12.0",
+    "qrcode": "^1.5.1",
+    "whatsapp-web.js": "^1.23.0"
+  }
+}
